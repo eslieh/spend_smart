@@ -1,2 +1,7 @@
 upload the database file to the server
 enter the db connection 
+create the user and grant the permissions
+upload the files to the server
+set the permissions for the files
+set the permissions for the directories
+set the permissions for the files
