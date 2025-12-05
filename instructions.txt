@@ -1,0 +1,2 @@
+upload the database file to the server
+enter the db connection 
