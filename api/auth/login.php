@@ -33,7 +33,7 @@ if (!$email || !$password) {
 // Fetch user
 $query = mysqli_query($conn, "SELECT id, password, name, profile_url, role FROM user WHERE email='$email'");
 if (mysqli_num_rows($query) === 0) {
-    http_status_code(401);
+    http_response_code(401);
     echo json_encode([
         "status" => "error",
         "message" => "Invalid email or password."
@@ -43,7 +43,7 @@ if (mysqli_num_rows($query) === 0) {
 $user = mysqli_fetch_assoc($query);
 // Verify password
 if (!password_verify($password, $user['password'])) {
-    http_status_code(401);
+    http_response_code(401);
     echo json_encode([
         "status" => "error",
         "message" => "Incorrect password."
